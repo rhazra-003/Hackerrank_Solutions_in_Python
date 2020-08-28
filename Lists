@@ -1,0 +1,20 @@
+if __name__ == '__main__':
+
+    n = int(input())
+
+lst = []
+
+for i in range(n):
+
+    s = input().split()
+
+    command = s[0]
+
+    args = s[1:]
+
+    if command !="print":
+
+        command += "("+ ",".join(args) +")"
+        eval("lst."+command)
+    else:
+        print(lst)
